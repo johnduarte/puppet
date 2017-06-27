@@ -3,6 +3,9 @@
 # present and accurate.
 test_name 'PA-466: Ensure env_windows_installdir fact is present and correct' do
 
+  tag 'audit:low',       # important runtime environment/packaging integration, rarely changed?
+      'audit:acceptance'
+
   confine :to, :platform => 'windows'
 
   require 'json'
