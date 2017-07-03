@@ -1,5 +1,8 @@
 test_name "#7681: Allow using array variables in resource references"
 
+tag 'audit:high',
+    'audit:integration'
+
 agents.each do |agent|
   test_manifest = <<MANIFEST
 $exec_names = ["first", "second"]
