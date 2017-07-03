@@ -1,5 +1,9 @@
 test_name "#8740: should not enumerate root directory"
 confine :except, :platform => 'windows'
+tag 'audit:high',
+    'audit:refactor',   # Use block style `test_name`
+    'audit:integration' # Could be done without major changes to the
+                        # system running this test
 
 target = "/test-socket-#{$$}"
 

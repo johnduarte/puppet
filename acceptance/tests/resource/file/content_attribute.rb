@@ -1,4 +1,8 @@
 test_name "Content Attribute"
+tag 'audit:high',
+    'audit:refactor',   # Use block stype test_name
+    'audit:integration' # Could be done without major changes to the
+                        # system running this test
 
 agents.each do |agent|
   target = agent.tmpfile('content_file_test')

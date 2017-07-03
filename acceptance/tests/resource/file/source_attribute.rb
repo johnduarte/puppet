@@ -2,6 +2,12 @@ test_name "The source attribute"
 require 'puppet/acceptance/module_utils'
 extend Puppet::Acceptance::ModuleUtils
 
+tag 'audit:high',
+    'audit:refactor',    # Use block style `test_name`
+    'audit:integration', # Could be done without major changes to the
+                         # system running this test
+    'server'
+
 @target_file_on_windows = 'C:/windows/temp/source_attr_test'
 @target_file_on_nix     = '/tmp/source_attr_test'
 @target_dir_on_windows  = 'C:/windows/temp/source_attr_test_dir'
