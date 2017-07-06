@@ -3,6 +3,9 @@ extend Puppet::Acceptance::EnvironmentUtils
 
 
 test_name 'Ensure a file resource can have a UTF-8 source attribute, content, and path when served via a module' do
+  tag 'audit:high',
+      'audit:integration' # Could be done without major changes to the
+                          # system running this test
 
   skip_test 'requires a master for serving module content' if master.nil?
   tag 'broken:images'

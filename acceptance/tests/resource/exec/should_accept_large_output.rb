@@ -1,4 +1,8 @@
 test_name "tests that puppet correctly captures large and empty output."
+tag 'audit:high',
+    'audit:refactor',   # Use block style `test_name`
+    'audit:integration' # Could be done without major changes to the
+                        # system running this test
 
 agents.each do |agent|
   testfile = agent.tmpfile('should_accept_large_output')

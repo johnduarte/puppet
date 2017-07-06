@@ -1,5 +1,9 @@
 test_name "#15560: Manage home directories"
 
+tag 'audit:medium',
+    'audit:refactor',   # Use block style `test_namme`
+    'audit:integration' # User type windows handling
+
 confine :to, :platform => 'windows'
 
 username = "pl#{rand(99999).to_i}"

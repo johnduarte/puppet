@@ -1,5 +1,10 @@
 test_name "#7680: 'links => follow' should use the file source content"
 
+tag 'audit:high',
+    'audit:refactor',   # Use block style `test_name`
+    'audit:integration' # Could be done without major changes to the
+                        # system running this test
+
 agents.each do |agent|
   if agent.platform.variant == 'windows'
     # symlinks are supported only on Vista+ (version 6.0 and higher)
